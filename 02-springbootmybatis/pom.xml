@@ -63,5 +63,33 @@
                 </configuration>
             </plugin>
         </plugins>
+
+        <resources>
+        <!--默认情况下，编译src/main/java目录下文件的时候只会编译class 文件，现在则表示编译的同时会把所有的
+        xml文件（**/*.xml）一并拷贝到编译文件夹下面。例如mybatis
+        -->
+        <resource>
+        <directory>src/main/java</directory>
+        <includes>
+        <include>**/*.xml</include>
+        </includes>
+        </resource>
+
+        <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+        <include>**/*.*</include>
+        </includes>
+        </resource>
+
+        <!--src/main/webapp下的所以资源（**/*.*）都编译到META-INF/resources目录下面-->
+        <resource>
+        <directory>src/main/webapp</directory>
+        <targetPath>META-INF/resources</targetPath>
+        <includes>
+        <include>**/*.*</include>
+        </includes>
+        </resource>
+        </resources>
     </build>
 </project>
