@@ -16,4 +16,8 @@ public class mybaitsController {
     public  Object Order(){
         return orderSertvice.getAllOrder();
     }
+    @GetMapping("/boot/update")
+    public  Object update(){
+        return orderSertvice.update();
+    }
 }

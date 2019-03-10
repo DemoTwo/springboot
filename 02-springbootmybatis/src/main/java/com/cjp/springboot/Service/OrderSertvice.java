@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface OrderSertvice {
     List<tb_Order> getAllOrder();
+
+    public int update();
 }
