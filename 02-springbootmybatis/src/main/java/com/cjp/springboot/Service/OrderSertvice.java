@@ -8,4 +8,6 @@ public interface OrderSertvice {
     List<tb_Order> getAllOrder();
 
     public int update();
+
+    public List<tb_Order> TestRedis();
 }
