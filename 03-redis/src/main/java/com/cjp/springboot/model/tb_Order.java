@@ -1,9 +1,10 @@
 package com.cjp.springboot.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class tb_Order {
+public class tb_Order implements Serializable {
     private Long orderId;
 
     private BigDecimal payment;
