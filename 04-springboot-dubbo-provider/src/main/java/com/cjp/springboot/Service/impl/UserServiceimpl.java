@@ -5,8 +5,9 @@ import com.cjp.springboot.model.User;
 import com.cjp.springboot.servcie.user;
 import org.springframework.stereotype.Component;
 
-//@Component
-@Service(timeout = 10000) //引入dubbo 服务，timeout 为10秒
+
+@Service(timeout = 10000,interfaceClass = user.class) //引入dubbo 服务，timeout 为10秒
+@Component
 public class UserServiceimpl implements user {
 
     @Override
